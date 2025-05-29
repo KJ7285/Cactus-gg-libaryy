@@ -14,3 +14,12 @@ Menu:SetSize(500, 400)
 Tab:
 ```lua
 local YournamehereTab = Menu.Tab("Main")
+```lua
+local yournameofsectiongohereSection = Menu.Container("Main", "Target Aim", "Left"
+```
+checkbox toggle:
+```lua
+Menu.CheckBox("Main", "Target Aim", "Enabled", TargetAimEnabled, function(state)
+    print(state)
+end)
+```
