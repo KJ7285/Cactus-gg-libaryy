@@ -11,3 +11,6 @@ Set size of window:
 ```lua
 Menu:SetSize(500, 400)
 ```
+Tab:
+```lua
+local YournamehereTab = Menu.Tab("Main")
