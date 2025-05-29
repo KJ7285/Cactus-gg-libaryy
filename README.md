@@ -60,3 +60,17 @@ Menu.ComboBox(
     end
 )
 ```
+Slider:
+```lua
+Menu.Slider("HvH", "CSync", "Distance",
+    0,
+    20,
+    0,
+    1,
+    function(namehere)
+        print(namehere)
+    end
+)
+
+--Note: You must create a tab for that slider and its container (aka section) 
+```
