@@ -41,6 +41,7 @@ local Settings = {
     SelectedHitPart = "Head"
 }
 
+local HitPartSection = Menu.Container("Main", "HitPart", "Left")
 
 Menu.ComboBox(
     "Main",
@@ -58,7 +59,7 @@ Menu.ComboBox(
         Settings.SelectedHitPart = selection
     end
 )
---note you need section for this
+--note you need section for this but the section in it for you if you dont wanna do it
 ```
 Slider:
 ```lua
@@ -72,5 +73,5 @@ Menu.Slider("namehere", "namehere", "namehere",
     end
 )
 
---Note: You must create a tab for that slider and its container (aka section) 
+--Note: You must create a tab for that slider and its container or know as a section 
 ```
