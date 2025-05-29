@@ -102,5 +102,4 @@ Image3.MouseButton1Click:Connect(function()
     ToggleMenu()
 end)
 
--- Note: You must create a tab of that slider and container aka section  
-  
+-- Note: You must create a tab and matching container (section) for every Menu element
