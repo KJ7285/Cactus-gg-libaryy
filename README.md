@@ -17,7 +17,8 @@ local YournamehereTab = Menu.Tab("Main")
 ```
 section:
 ```lua
-local yournameofsectiongohereSection = Menu.Container("Main", "Target Aim", "Left"
+local NamegohereSection = Menu.Container("Main", "Test", "Left")
+
 ```
 
 checkbox toggle:
@@ -29,7 +30,7 @@ end)
 
 textbox Idk how figure it out:
 ```lua
-Menu.TextBox("HvH", "Bullet-TP", "X", "input", function(input)
+Menu.TextBox("Main", "Target Aim", "X", "input", function(input)
     print(input)
 end)
 ```
