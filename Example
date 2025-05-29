@@ -1,0 +1,105 @@
+local Menu = loadstring(game:HttpGet("https://raw.githubusercontent.com/khenn791/library/refs/heads/main/cuh.txt", true))()
+
+Menu:SetSize(500, 400)
+Menu.Notify("Script Loaded.", 2)
+
+local CombatTab = Menu.Tab("Main")
+local HvHTab    = Menu.Tab("HvH")
+local MiscTab   = Menu.Tab("Misc")
+
+local TargetAimSection = Menu.Container("Main", "Target Aim", "Left")
+local CSyncSection     = Menu.Container("HvH",   "CSync",       "Left")
+local MiscSection      = Menu.Container("Misc",  "Test",        "Left")
+
+local TargetAimEnabled = false
+
+Menu.CheckBox("Main", "Target Aim", "Enabled", TargetAimEnabled, function(state)
+    TargetAimEnabled = state
+end)
+
+Menu.TextBox("Main", "Target Aim", "X", "input", function(input)
+    print(input)
+end)
+
+Menu.Button("Misc", "test", "test", function()
+    -- scirpt bere
+end)
+
+Menu.Slider("HvH", "CSync", "Distance",
+    0,
+    20,
+    0,
+    1,
+    function(namehere)
+        print(namehere)
+    end
+)
+
+local ScreenGui              = Instance.new("ScreenGui")
+local Frame                  = Instance.new("Frame")
+local TextButton             = Instance.new("TextButton")
+local UITextSizeConstraint   = Instance.new("UITextSizeConstraint")
+
+ScreenGui.Parent           = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior   = Enum.ZIndexBehavior.Sibling
+
+local Ui22 = Instance.new("ScreenGui")
+Ui22.Name                 = "Ui22"
+Ui22.Parent               = game.CoreGui
+Ui22.ZIndexBehavior       = Enum.ZIndexBehavior.Sibling
+Ui22.ResetOnSpawn         = false
+
+local Image3 = Instance.new("ImageButton")
+Image3.Name               = "Image3"
+Image3.Parent             = Ui22
+Image3.Active             = false
+Image3.Draggable          = true
+Image3.BackgroundColor3   = Color3.fromRGB(20, 20, 20)
+Image3.BackgroundTransparency = 1
+Image3.Size               = UDim2.new(0, 90, 0, 90)
+Image3.Image              = "rbxassetid://126818107683779"
+Image3.Position           = UDim2.new(1, -95, 0, 5)
+
+local Ui2corner = Instance.new("UICorner")
+Ui2corner.CornerRadius    = UDim.new(0.2, 0)
+Ui2corner.Parent          = Image3
+
+local Blur = Instance.new("BlurEffect", game:GetService("Lighting"))
+Blur.Enabled              = false
+
+local butj = Instance.new("ImageLabel")
+butj.Size                 = UDim2.new(0, 200, 0, 200)
+local elementWidth        = butj.Size.X.Offset
+local elementHeight       = butj.Size.Y.Offset
+butj.Position             = UDim2.new(0.5, -elementWidth/2, 0.5, -elementHeight/2)
+butj.Active               = false
+butj.BackgroundTransparency = 1
+butj.ImageTransparency    = 1
+butj.Parent               = Ui22
+butj.Image                = "rbxassetid://126818107683779"
+
+local Open = true
+Menu:SetVisible(false)
+
+local function ToggleMenu()
+    if Open then
+        Blur.Enabled         = true
+        butj.ImageTransparency = 0
+        Menu:SetVisible(true)
+    else
+        Blur.Enabled         = false
+        Menu:SetVisible(false)
+        for i = 0, 1, 0.1 do
+            butj.ImageTransparency = i
+            task.wait(0.05)
+        end
+    end
+end
+
+Image3.MouseButton1Click:Connect(function()
+    Open = not Open
+    print("idk")
+    ToggleMenu()
+end)
+
+-- Note: You must create a tab of that slider and container aka section
