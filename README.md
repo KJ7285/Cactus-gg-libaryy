@@ -23,14 +23,14 @@ local NamegohereSection = Menu.Container("Main", "Test", "Left")
 
 checkbox toggle:
 ```lua
-Menu.CheckBox("Main", "Target Aim", "Enabled", functionhere, function(state)
+Menu.CheckBox("Main", "Toggle, "Enabled", functionhere, function(state)
     print(state)
 end)
 ```
 
 textbox Idk how figure it out:
 ```lua
-Menu.TextBox("Main", "Target Aim", "X", "input", function(input)
+Menu.TextBox("Main", "textbox", "chnage here", "input", function(input)
     print(input)
 end)
 ```
