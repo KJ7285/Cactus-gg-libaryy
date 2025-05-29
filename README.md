@@ -41,7 +41,6 @@ local Settings = {
     SelectedHitPart = "Head"
 }
 
-local HitPartSection = Menu.Container("Main", "HitPart", "Left")
 
 Menu.ComboBox(
     "Main",
@@ -59,10 +58,11 @@ Menu.ComboBox(
         Settings.SelectedHitPart = selection
     end
 )
+--note you need section for this
 ```
 Slider:
 ```lua
-Menu.Slider("HvH", "CSync", "Distance",
+Menu.Slider("namehere", "namehere", "namehere",
     0,
     20,
     0,
