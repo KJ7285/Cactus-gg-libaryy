@@ -22,7 +22,7 @@ local yournameofsectiongohereSection = Menu.Container("Main", "Target Aim", "Lef
 
 checkbox toggle:
 ```lua
-Menu.CheckBox("Main", "Target Aim", "Enabled", TargetAimEnabled, function(state)
+Menu.CheckBox("Main", "Target Aim", "Enabled", functionhere, function(state)
     print(state)
 end)
 ```
