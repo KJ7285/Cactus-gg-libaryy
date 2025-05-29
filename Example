@@ -9,7 +9,7 @@ local MiscTab   = Menu.Tab("Misc")
 
 local TargetAimSection = Menu.Container("Main", "Target Aim", "Left")
 local CSyncSection     = Menu.Container("HvH",   "CSync",       "Left")
-local MiscSection      = Menu.Container("Misc",  "Test",        "Left")
+local MiscSection      = Menu.Container("Misc",  "test",        "Left")
 
 local TargetAimEnabled = false
 
@@ -22,7 +22,7 @@ Menu.TextBox("Main", "Target Aim", "X", "input", function(input)
 end)
 
 Menu.Button("Misc", "test", "test", function()
-    -- scirpt bere
+    -- script here
 end)
 
 Menu.Slider("HvH", "CSync", "Distance",
@@ -35,19 +35,19 @@ Menu.Slider("HvH", "CSync", "Distance",
     end
 )
 
-local ScreenGui              = Instance.new("ScreenGui")
-local Frame                  = Instance.new("Frame")
-local TextButton             = Instance.new("TextButton")
-local UITextSizeConstraint   = Instance.new("UITextSizeConstraint")
+local ScreenGui            = Instance.new("ScreenGui")
+local Frame                = Instance.new("Frame")
+local TextButton           = Instance.new("TextButton")
+local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
 
-ScreenGui.Parent           = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ZIndexBehavior   = Enum.ZIndexBehavior.Sibling
+ScreenGui.Parent         = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 local Ui22 = Instance.new("ScreenGui")
-Ui22.Name                 = "Ui22"
-Ui22.Parent               = game.CoreGui
-Ui22.ZIndexBehavior       = Enum.ZIndexBehavior.Sibling
-Ui22.ResetOnSpawn         = false
+Ui22.Name               = "Ui22"
+Ui22.Parent             = game.CoreGui
+Ui22.ZIndexBehavior     = Enum.ZIndexBehavior.Sibling
+Ui22.ResetOnSpawn       = false
 
 local Image3 = Instance.new("ImageButton")
 Image3.Name               = "Image3"
@@ -83,11 +83,11 @@ Menu:SetVisible(false)
 
 local function ToggleMenu()
     if Open then
-        Blur.Enabled         = true
-        butj.ImageTransparency = 0
+        Blur.Enabled            = true
+        butj.ImageTransparency  = 0
         Menu:SetVisible(true)
     else
-        Blur.Enabled         = false
+        Blur.Enabled            = false
         Menu:SetVisible(false)
         for i = 0, 1, 0.1 do
             butj.ImageTransparency = i
@@ -102,4 +102,5 @@ Image3.MouseButton1Click:Connect(function()
     ToggleMenu()
 end)
 
--- Note: You must create a tab of that slider and container aka section
+-- Note: You must create a tab of that slider and container aka section  
+  
