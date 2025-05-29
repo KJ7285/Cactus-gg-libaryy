@@ -75,3 +75,11 @@ Menu.Slider("namehere", "namehere", "namehere",
 
 --Note: You must create a tab for that slider and its container or know as a section 
 ```
+
+button
+```lua
+Menu.Button("Test", "kdk", "eat my toes", function()
+    -- put yo scirot here kr code
+end)
+--note u neeed contianer to
+```
