@@ -34,3 +34,29 @@ Menu.TextBox("Main", "textbox", "chnage here", "input", function(input)
     print(input)
 end)
 ```
+
+dropdown little broken:
+```lua
+local Settings = {
+    SelectedHitPart = "Head"
+}
+
+local HitPartSection = Menu.Container("Main", "HitPart", "Left")
+
+Menu.ComboBox(
+    "Main",
+    "HitPart",
+    "BodyPart",
+    "Body Part",
+    {
+        "Head", "UpperTorso", "LowerTorso", "HumanoidRootPart",
+        "LeftUpperArm", "LeftLowerArm", "LeftHand",
+        "RightUpperArm", "RightLowerArm", "RightHand",
+        "LeftUpperLeg", "LeftLowerLeg", "LeftFoot",
+        "RightUpperLeg", "RightLowerLeg", "RightFoot"
+    },
+    function(selection)
+        Settings.SelectedHitPart = selection
+    end
+)
+```
