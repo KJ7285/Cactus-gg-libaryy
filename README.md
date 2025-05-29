@@ -26,3 +26,10 @@ Menu.CheckBox("Main", "Target Aim", "Enabled", functionhere, function(state)
     print(state)
 end)
 ```
+
+textbox Idk how figure it out:
+```lua
+Menu.TextBox("HvH", "Bullet-TP", "X", "input", function(input)
+    print(input)
+end)
+```
